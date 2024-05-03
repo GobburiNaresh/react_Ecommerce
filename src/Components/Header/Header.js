@@ -2,7 +2,7 @@ import React,{useContext} from 'react';
 import {Container,Navbar,Nav} from 'react-bootstrap';
 import ButtonComponent from './Button';
 import { CartContext } from '../Context/ItemContext';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -13,10 +13,11 @@ const Header = () => {
             <Container>
                 <Navbar.Brand style={{fontWeight: 'bold',fontSize: '48px'}}>The Generics</Navbar.Brand>
                 <Nav>
-                    <NavLink to="https://prasadyash2411.github.io/ecom-website/index.html" style={{marginRight:'30px'}}>HOME</NavLink>
-                    <NavLink to='/' style={{marginRight:'30px'}}>STORE</NavLink>
-                    <NavLink to="https://prasadyash2411.github.io/ecom-website/about.html" style={{marginRight:'30px'}}>ABOUT</NavLink>
-                    <NavLink to='/contactUs' style={{marginRight:'30px'}}>Contact Us</NavLink>
+                    <Link to="https://prasadyash2411.github.io/ecom-website/index.html" style={{marginRight:'15px'}}>HOME</Link>
+                    <Link to='/' style={{marginRight:'15px'}}>STORE</Link>
+                    <Link to="https://prasadyash2411.github.io/ecom-website/about.html" style={{marginRight:'15px'}}>ABOUT</Link>
+                    <Link to='/contactUs' style={{marginRight:'15px'}}>Contact Us</Link>
+                    <Link to='/login' style={{marginRight:'15px'}}>Login</Link>
                 </Nav>
                 <ButtonComponent>Cart ({itemCount})</ButtonComponent>
             </Container>
